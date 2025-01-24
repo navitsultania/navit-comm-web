@@ -73,7 +73,7 @@ const UserList = ({ token, onSelectUser }) => {
                     <div className="card shadow-sm">
                         <div className="card-header bg-white">
                             <div className="d-flex justify-content-between align-items-center">
-                                <h4 className="mb-0">People List</h4>
+                                <h4 className="mb-0">Friend List</h4>
                                 <div className="input-group" style={{ maxWidth: '250px' }}>
                                     <span className="input-group-text bg-light border-end-0">
                                         <i className="bi bi-search"></i>
@@ -92,7 +92,7 @@ const UserList = ({ token, onSelectUser }) => {
                             {filteredUsers.length === 0 ? (
                                 <div className="text-center py-5">
                                     <i className="bi bi-people" style={{ fontSize: '2rem' }}></i>
-                                    <p className="mt-2">No users found</p>
+                                    <p className="mt-2">No Chat found</p>
                                 </div>
                             ) : (
                                 <ul className="list-group list-group-flush">

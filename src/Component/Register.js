@@ -8,7 +8,9 @@ const Register = () => {
         email: '',
         password: '',
         userName: '',
-        confirmPassword: ''
+        gender: '',
+        confirmPassword: '',
+        phoneNo: ''
     });
     const [error, setError] = useState('');
     const [loading, setLoading] = useState(false);
@@ -97,6 +99,60 @@ const Register = () => {
                                         onChange={handleChange}
                                         required
                                     />
+                                </div>
+                                <div className="row mb-4">
+                                    <div className="col-md-6">
+                                        <label className="form-label">
+                                            <i className="bi bi-gender-ambiguous me-2"></i>Gender
+                                        </label>
+                                        <div className="d-flex gap-4">
+                                            <div className="form-check">
+                                                <input
+                                                    type="radio"
+                                                    className="form-check-input"
+                                                    id="male"
+                                                    name="gender"
+                                                    value="male"
+                                                    checked={formData.gender === 'male'}
+                                                    onChange={handleChange}
+                                                    required
+                                                />
+                                                <label className="form-check-label" htmlFor="male">
+                                                    Male
+                                                </label>
+                                            </div>
+                                            <div className="form-check">
+                                                <input
+                                                    type="radio"
+                                                    className="form-check-input"
+                                                    id="female"
+                                                    name="gender"
+                                                    value="female"
+                                                    checked={formData.gender === 'female'}
+                                                    onChange={handleChange}
+                                                    required
+                                                />
+                                                <label className="form-check-label" htmlFor="female">
+                                                    Female
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="col-md-6">
+                                        <label htmlFor="phoneNo" className="form-label">
+                                            <i className="bi bi-phone me-2"></i>Phone Number
+                                        </label>
+                                        <input
+                                            type="tel"
+                                            className="form-control form-control-lg bg-light"
+                                            id="phoneNo"
+                                            name="phoneNo"
+                                            placeholder="(123) 456-7890"
+                                            maxLength="13"
+                                            value={formData.phoneNo}
+                                            onChange={handleChange}
+                                        />
+                                    </div>
                                 </div>
 
                                 <div className="mb-4">

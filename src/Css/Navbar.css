@@ -5,7 +5,7 @@
     left: 0; /* Align to the left */
     right: 0; /* Align to the right */
     background-color: #fff; /* Background color */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+    box-shadow: 0 50px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
     z-index: 1000; /* Ensure it stays above other content */
 }
 

@@ -7,8 +7,8 @@ const StatusChnager = createContext();
 const VisibilityProvider = ({ children }) => {
 const timeoutRef = useRef(null);
   const hitApi = (action) => {
-    debugger;
     const token = localStorage.getItem('token');
+    if(!token) return;
      axios.post(`${apiUrl}/ChatMessage/status/${action}`,null, {
         headers: {
             Authorization: `Bearer ${token}`,

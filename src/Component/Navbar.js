@@ -63,8 +63,8 @@ const Navbar = ({ isLoggedIn, onLogout, token, onSelectUser }) => {
             <div className="container">
                 {/* Brand */}
                 <Link to="/" className="navbar-brand d-flex align-items-center">
-                    <i className="bi bi-chat-dots-fill text-primary me-2"></i>
-                    <span className="fw-bold">Communication</span>
+                    {/*<i className="bi bi-chat-dots-fill text-primary me-2"></i>*/}
+                    <span className="fw-bold">Somatus cummunication</span>
                 </Link>
 
                 {/* Mobile Toggle */}
@@ -142,22 +142,7 @@ const Navbar = ({ isLoggedIn, onLogout, token, onSelectUser }) => {
                                     </button>
                                 </li>
                             </>
-                        ) : (
-                            <>
-                                <li className="nav-item">
-                                    <Link to="/login" className="btn btn-outline-primary me-2">
-                                        <i className="bi bi-box-arrow-in-right me-1"></i>
-                                        Login
-                                    </Link>
-                                </li>
-                                <li className="nav-item">
-                                    <Link to="/register" className="btn btn-primary">
-                                        <i className="bi bi-person-plus me-1"></i>
-                                        Register
-                                    </Link>
-                                </li>
-                            </>
-                        )}
+                        ):(<></>) }
                     </ul>
                 </div>
             </div>

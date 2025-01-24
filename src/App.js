@@ -106,6 +106,7 @@ function App() {
       ...prev,
       selectedUser: user,
     }));
+    localStorage.setItem('selectedUser ', JSON.stringify(user));
   }, []);
 
   const handleLogin = useCallback((token) => {
@@ -118,6 +119,8 @@ function App() {
       }));
     } else {
       console.error('Received expired token during login');
+      localStorage.removeItem('token');
+      localStorage.removeItem('selectedUser ');
     }
   }, []);
 
@@ -130,6 +133,7 @@ function App() {
       console.error('Error during logout:', error);
     } finally {
       localStorage.removeItem('token');
+      localStorage.removeItem('selectedUser ');
       setAuthState({
         token: '',
         isLoggedIn: false,
@@ -208,7 +212,7 @@ function App() {
               <Navigate to="/userlist" replace />
             )
           }
-        />
+        /><Route path="/forgot-password/:key" element={<ForgotPassword />} />
         </Routes>
         
       </div>
