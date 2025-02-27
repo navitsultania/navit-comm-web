@@ -6,10 +6,12 @@
     "@microsoft/signalr": "^8.0.7",
     "axios": "^1.7.9",
     "bootstrap": "^5.3.3",
+    "buffer": "^6.0.3",
     "cra-template": "1.2.0",
+    "moment-timezone": "^0.5.47",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-router-dom": "^7.1.1",
+    "react-router-dom": "^7.2.0",
     "react-scripts": "5.0.1",
     "simple-peer": "^9.11.1",
     "web-vitals": "^4.2.4"

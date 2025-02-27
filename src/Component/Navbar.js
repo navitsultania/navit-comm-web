@@ -63,8 +63,8 @@ const Navbar = ({ isLoggedIn, onLogout, token, onSelectUser }) => {
             <div className="container">
                 {/* Brand */}
                 <Link to="/" className="navbar-brand d-flex align-items-center">
-                    {/*<i className="bi bi-chat-dots-fill text-primary me-2"></i>*/}
-                    <span className="fw-bold">Somatus cummunication</span>
+                    {<i className="bi bi-chat-square-text-fill text-primary me-2"></i>}
+                    <span className="fw-bold">Voice & Vision</span>
                 </Link>
 
                 {/* Mobile Toggle */}
